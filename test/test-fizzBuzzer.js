@@ -1,4 +1,4 @@
-const expect = require('chai');
+const expect = require('chai').expect;
 
 const fizzBuzzer = require('../fizzBuzzer');
 
@@ -17,6 +17,13 @@ describe('fizzBuzzer', function(){
 			//normal case
 		});
 	});
-	
+	it('should raise error if it does not print fizz, buzz, or fizz-buzz or a num');
+		const badInputs = ['a', true];
+		badInputs.forEach(function(input){
+			expect(function(){
+				fizzBuzzer(input).to.throw(error);
+			});
+		});
+
 	//wrong case
 });
